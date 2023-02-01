@@ -1,0 +1,19 @@
+{
+	"name": "finance-portfolio",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"build": "next build",
+		"postbuild": "next-sitemap",
+		"dev": "next dev",
+		"export": "next export",
+		"test": "jest --coverage --watchAll false --passWithNoTests",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"src/**/*.(ts|tsx)": [
+			"eslint --fix",
+			"npm run test --bail --findRelatedTests"
+		]
+	}
+}
